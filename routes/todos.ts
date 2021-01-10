@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import { v4 as uuid} from 'uuid';
+import {v4 as uuid} from 'uuid';
 import * as storage from '../storage/fs'
 
 const router = Router();

@@ -1,5 +1,4 @@
 import { promises as fsp } from "fs";
-import {promises} from "dns";
 
 type ItemType = {
     id: string;

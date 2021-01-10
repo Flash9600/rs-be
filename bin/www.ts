@@ -11,7 +11,7 @@ import * as http from 'http';
 /**
  * Get port from environment and store in Express.
  */
-const debug = debug0('rs-backend:server')
+const debug = debug0('rs-clone-wars:server')
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -53,7 +53,7 @@ function normalizePort(val: string) {
  * Event listener for HTTP server "error" event.
  */
 
-function onError(error: { syscall: string; code: any; }) {
+function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
   }
@@ -83,10 +83,8 @@ function onError(error: { syscall: string; code: any; }) {
 
 function onListening() {
   let addr = server.address();
-  if (addr !== null){
   const bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  }
 }

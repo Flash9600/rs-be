@@ -10,7 +10,7 @@ var http = require("http");
 /**
  * Get port from environment and store in Express.
  */
-var debug = debug_1.default('rs-backend:server');
+var debug = debug_1.default('rs-clone-wars:server');
 var port = normalizePort(process.env.PORT || '3000');
 app_1.default.set('port', port);
 /**

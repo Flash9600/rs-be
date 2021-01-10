@@ -1,5 +1,5 @@
-import {Router} from 'express';
 import {v1 as uuid} from 'uuid';
+import {Router} from 'express';
 import * as storage from '../storage/fs'
 
 const router = Router();
@@ -16,7 +16,9 @@ router.get('/:id', async(req, res, next) =>{
   const item = await storage.getById(req.params['id']);
   res
       .status(item ? 200: 404)
-      .json(item)
+      .json(item ?? {
+        statusCode: 404
+      })
 });
 
 router.post('/', async(req, res, next) =>{

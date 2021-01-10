@@ -5,13 +5,13 @@
  */
 
 import app from '../app';
-import debug from 'debug';
+import debug0 from 'debug';
 import * as http from 'http';
 
 /**
  * Get port from environment and store in Express.
  */
-
+const debug = debug0('rs-backend:server')
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 

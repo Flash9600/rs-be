@@ -48,7 +48,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
-var {v4: uuid_1} = require("uuid");
+var {v1: uuid_1} = require("uuid");
 var storage = require("../storage/fs");
 var router = express_1.Router();
 /* GET users listing. */
